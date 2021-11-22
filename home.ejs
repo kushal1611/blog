@@ -1,0 +1,21 @@
+
+<%- include("partials/header"); -%>
+
+    <h1>Benefits of Scholarships</h1>
+    <p>The value of scholarships varies and can range from $1000 to $15,000 per annum. These funds are intended to help with study related costs including textbooks and equipment. The funds can also help cover the costs of living, including accommodation, tuition, relocation and travel. Along with the financial benefits scholarship recipients receive, there is the recognition and prestige associated with being awarded a scholarship- which will be recorded on the recipient's academic transcript. You can also add your scholarship award to your resume and sometimes there are opportunities to undertake work experience with your scholarship donor or sponsor.</p>
+
+
+  <%  posts.forEach(function(post){ %>
+    <br>
+    <hr>
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post._id%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+    <a href="compose"><button type="button" name="button" class="btn btn-light">Compose</button></a>
+
+<%- include("partials/footer"); -%>
